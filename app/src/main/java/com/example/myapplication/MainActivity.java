@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     SeekBar seekBarIleLat;
     Button buttonOK;
     TextView textViewIleLat;
+    int wiek;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +35,22 @@ public class MainActivity extends AppCompatActivity {
         textViewIleLat = findViewById(R.id.textView3);
         buttonOK = findViewById(R.id.button);
 
-        buttonOK.setOnClickListener(
-                new View.OnClickListener() {
+        seekBarIleLat.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
                     @Override
-                    public void onClick(View view) {
+                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                        wiek = i;
+                        textViewIleLat.setText("Ile ma lat? " + wiek);
 
+                    }
 
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
 
                     }
                 }
