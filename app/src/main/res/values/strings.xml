@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string-array name="gatunki">
+        <item>Pies</item>
+        <item>Kot</item>
+        <item>Świnka morska</item>
+    </string-array>
 </resources>
